@@ -677,9 +677,9 @@ public class MainActivity extends AppCompatActivity {
 
                         boolean isUpdate = myDB.updateData(idNum, name, goals, assists, yc, rc, apps);
                         if (isUpdate == true)
-                            Toast.makeText(MainActivity.this, "Data Update", Toast.LENGTH_LONG).show();
+                            Toast.makeText(MainActivity.this, "Data Update", Toast.LENGTH_SHORT).show();
                         else
-                            Toast.makeText(MainActivity.this, "Data not Updated", Toast.LENGTH_LONG).show();
+                            Toast.makeText(MainActivity.this, "Data not Updated", Toast.LENGTH_SHORT).show();
                     }
                 }
         );
@@ -703,6 +703,8 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     resetData();
+                    getData();
+                    Toast.makeText(MainActivity.this, "Data Reset", Toast.LENGTH_SHORT).show();
                 }
             }
 
